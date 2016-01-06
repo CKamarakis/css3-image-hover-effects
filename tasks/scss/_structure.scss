@@ -7,7 +7,7 @@ html {
 }
 
 body {
-	font-size: 13px;
+	font-size: 16px;
 	font-family: Roboto, Arial, Helvetica;
 	color: $main_txt;
 	background: $main_bg;
@@ -19,9 +19,19 @@ a:focus {
 	text-decoration: none;
 }
 
+h1{
+	font-size:34px;
+}
+
+h2{
+	font-size:28px;
+	text-align: center;
+}
+
 .container{
 	width:100%;
 	padding: 30px 0;
+	border-top:1px solid $main_txt;
 }
 
 .content-wrapper {

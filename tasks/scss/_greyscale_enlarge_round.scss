@@ -1,0 +1,17 @@
+.greyscale-enlarge-round {
+	img {
+		width: 80%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+		display: block;
+		@include transition-duration(750ms);
+		@include greyscale();
+		@include create-round-corners(50%);
+		&:hover {
+			@include scale(1.2);
+			@include ungreyscale();
+		}
+	}
+}

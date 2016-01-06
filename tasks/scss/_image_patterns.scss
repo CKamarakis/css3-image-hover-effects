@@ -1,0 +1,13 @@
+.square-pattern {
+	article {
+		width: 30%;
+		margin: 30px 1.66%;
+		float: left;
+		&:first-of-type{
+			margin: 30px 3.33% 30px 0;
+		}
+		&:last-of-type{
+			margin: 30px 0 30px 3.33%;
+		}
+	}
+}

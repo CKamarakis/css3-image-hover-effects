@@ -1,0 +1,11 @@
+.greyscale{
+	img {
+		width: 100%;
+		height: auto;
+		@include simple-transition(800ms);
+		@include greyscale();
+		&:hover{
+			@include ungreyscale();
+		}
+	}
+}
