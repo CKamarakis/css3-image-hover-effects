@@ -18,3 +18,37 @@ a:hover,
 a:focus {
 	text-decoration: none;
 }
+
+.container{
+	width:100%;
+	padding: 30px 0;
+}
+
+.content-wrapper {
+	width: 990px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+	.content-wrapper {
+		width: 720px;
+	}
+
+}
+
+@media (min-width: 351px) and (max-width: 767px) {
+	.content-wrapper {
+		width: calc(100% - 30px);
+	}
+}
+
+@media (max-width: 350px) {
+	.content-wrapper {
+		width: calc(100% - 20px);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
