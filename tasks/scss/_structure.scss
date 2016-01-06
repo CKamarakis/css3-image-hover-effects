@@ -1,0 +1,20 @@
+body,
+html {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 13px;
+	font-family: Roboto, Arial, Helvetica;
+	color: $main_txt;
+	background: $main_bg;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+}

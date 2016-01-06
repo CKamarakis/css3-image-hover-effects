@@ -1,0 +1,34 @@
+@mixin create-round-corners($pixels) {
+	-webkit-border-radius: $pixels;
+	-moz-border-radius: $pixels;
+	border-radius: $pixels;
+}
+
+@mixin create-opacity($op) {
+	opacity: $op;
+	$op-ie: ($op * 100);
+	filter: alpha(opacity=$op-ie);
+}
+
+@mixin simple-transition($duration) {
+	-webkit-transition: $duration !important;
+	-moz-transition: $duration !important;
+	-o-transition: $duration !important;
+	transition: $duration !important;
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+	-ms-transform: translate($x, $y); // IE9 only
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
