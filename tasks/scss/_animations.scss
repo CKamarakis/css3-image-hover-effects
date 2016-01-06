@@ -3,11 +3,11 @@
 	transition-duration: $duration;
 }
 
-@mixin simple-transition($duration) {
-	-webkit-transition: $duration;
-	-moz-transition: $duration;
-	-o-transition: $duration;
-	transition: $duration;
+@mixin simple-transition($params) {
+	-webkit-transition: $params;
+	-moz-transition: $params;
+	-o-transition: $params;
+	transition: $params;
 }
 
 @mixin translate($x, $y) {

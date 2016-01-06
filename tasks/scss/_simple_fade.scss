@@ -1,0 +1,18 @@
+.simple-fade {
+	article {
+		position: relative;
+		overflow: visible;
+		height: 300px;
+		img {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: auto;
+			@include simple-transition(opacity 1000ms ease-in-out);
+			&.over:hover {
+				@include create-opacity(0);
+			}
+		}
+	}
+
+}

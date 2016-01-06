@@ -150,4 +150,21 @@ h2 {
     filter: url(../svg/ungrayscale.svg);
     filter: grayscale(0%); }
 
+.simple-fade article {
+  position: relative;
+  overflow: visible;
+  height: 300px; }
+  .simple-fade article img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-transition: opacity 1000ms ease-in-out;
+    -moz-transition: opacity 1000ms ease-in-out;
+    -o-transition: opacity 1000ms ease-in-out;
+    transition: opacity 1000ms ease-in-out; }
+    .simple-fade article img.over:hover {
+      opacity: 0;
+      filter: alpha(opacity=0); }
+
 /*# sourceMappingURL=style.css.map */
