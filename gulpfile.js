@@ -61,6 +61,7 @@ gulp.task('scripts', ['styles'], function () {
     var pipeline = new Pipeline();
 
     pipeline.add([
+		'tasks/libraries/jquery/jquery.js',
         config.allJSFiles
     ], 'script.js');
 

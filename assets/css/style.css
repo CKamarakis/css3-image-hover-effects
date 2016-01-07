@@ -25,8 +25,7 @@ h2 {
 
 .container {
   width: 100%;
-  padding: 30px 0;
-  border-top: 1px solid #EEEEEE; }
+  padding: 30px 0; }
 
 .content-wrapper {
   width: 990px;
@@ -64,6 +63,51 @@ h2 {
     margin: 30px 3.33% 30px 0; }
   .square-pattern article:last-of-type {
     margin: 30px 0 30px 3.33%; }
+
+nav {
+  width: 100%;
+  text-align: center;
+  color: #AAAAAA;
+  padding-bottom: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #EEEEEE; }
+  nav a {
+    color: #AAAAAA;
+    padding: 5px 0;
+    margin: 0 10px;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -o-transition: 400ms;
+    transition: 400ms;
+    display: block;
+    float: left; }
+    nav a::first-letter {
+      border-top: 1px solid #AAAAAA;
+      border-bottom: 1px solid #AAAAAA;
+      margin-right: 1px;
+      padding: 10px 0 10px 2px; }
+  nav a:focus,
+  nav a:hover,
+  nav a.active {
+    color: #EEEEEE; }
+    nav a:focus::first-letter,
+    nav a:hover::first-letter,
+    nav a.active::first-letter {
+      border-top: 1px solid #EEEEEE;
+      border-bottom: 1px solid #EEEEEE; }
+
+ul#selection-tabs {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  ul#selection-tabs li {
+    list-style: none;
+    display: none; }
+    ul#selection-tabs li.container:last-of-type {
+      border-bottom: 0px solid #EEEEEE; }
+  ul#selection-tabs li:first-of-type {
+    display: block; }
 
 .greyscale img {
   width: 100%;
