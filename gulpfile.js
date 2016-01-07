@@ -19,7 +19,7 @@ app.addStyle = function (paths, filename) {
         .pipe(plugins.plumber())
         .pipe(plugins.if(config.sourceMaps, plugins.sourcemaps.init()))
         .pipe(plugins.sass())
-        .pipe(plugins.concat('assets/css/' + filename))
+		.pipe(config.production ? plugins.concat('assets/css/' + filename + '.min.css') : plugins.concat('assets/css/' + filename + '.css'))
         //util noop does nothing absolutely nothing
         .pipe(config.production ? plugins.minifyCss({keepSpecialComments: 0, rebase: false}) : plugins.util.noop())
         .pipe(plugins.if(config.sourceMaps, plugins.sourcemaps.write('.')))
@@ -31,7 +31,7 @@ app.addScript = function (paths, filename) {
     return gulp.src(paths)
         .pipe(plugins.plumber())
         .pipe(plugins.if(config.sourceMaps, plugins.sourcemaps.init()))
-        .pipe(plugins.concat('assets/js/' + filename))
+        .pipe(config.production ? plugins.concat('assets/js/' + filename + '.min.js') : plugins.concat('assets/js/' + filename + '.js'))
         .pipe(config.production ? plugins.uglify() : plugins.util.noop())
         .pipe(plugins.if(config.sourceMaps, plugins.sourcemaps.write('.')))
         .pipe(gulp.dest('.'));
@@ -50,7 +50,7 @@ gulp.task('styles', function () {
 
     pipeline.add([
         config.allSCSSFiles
-    ], 'style.css');
+    ], 'hover-effects');
 
     return pipeline.run(app.addStyle);
 });
@@ -63,7 +63,7 @@ gulp.task('scripts', ['styles'], function () {
     pipeline.add([
 		'tasks/libraries/jquery/jquery.js',
         config.allJSFiles
-    ], 'script.js');
+    ], 'hover-effects');
 
     return pipeline.run(app.addScript);
 

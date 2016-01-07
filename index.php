@@ -10,9 +10,9 @@
         rel='stylesheet' type='text/css'/>
 
 
-    <link type="text/css" rel="stylesheet" media="all" href="assets/css/style.css"/>
+    <link type="text/css" rel="stylesheet" media="all" href="assets/css/hover-effects.css"/>
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/hover-effects.js"></script>
 </head>
 <body>
 
