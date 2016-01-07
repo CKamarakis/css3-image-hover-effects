@@ -10,14 +10,15 @@ nav {
 		color: $alternative_text;
 		padding: 5px 0;
 		margin:0 10px;
-		@include simple-transition(400ms);
+		@include simple-transition(500ms);
 		display: block;
 		float:left;
 		&::first-letter{
 			border-top: 1px solid $alternative_text;
 			border-bottom: 1px solid $alternative_text;
 			margin-right: 1px;
-			padding: 10px 0 10px 2px;
+			padding: 10px 0 10px 0px;
+			@include simple-transition(500ms);
 		}
 	}
 	a:focus,
@@ -27,6 +28,7 @@ nav {
 		&::first-letter {
 			border-top: 1px solid $main_txt;
 			border-bottom: 1px solid $main_txt;
+			padding: 10px 0 10px 4px;
 		}
 	}
 }

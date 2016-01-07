@@ -3,6 +3,13 @@
 	transition-duration: $duration;
 }
 
+@mixin transition-delay($duration) {
+	-webkit-transition-delay: $duration;
+	-moz-transition-delay: $duration;
+	-o-transition-delay: $duration;
+	transition-delay: $duration;
+}
+
 @mixin simple-transition($params) {
 	-webkit-transition: $params;
 	-moz-transition: $params;
@@ -48,4 +55,25 @@
 	-o-filter: grayscale(0%);
 	filter: url(../svg/ungrayscale.svg);
 	filter: grayscale(0%);
+}
+
+@mixin simple-animation($duration, $delay, $ease, $element: all) {
+	transition-property: $element;
+
+	transition-duration: $duration;
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+
+	transition-timing-function: $ease;
+	@include transition-delay($delay);
+}
+
+@mixin complete_animation($duration, $delay, $ease, $transform, $originX: 50%, $originY: 50%, $element: all) {
+	@include simple-animation($duration, $delay, $ease, $element);
+	transform-origin: $originX $originY;
+	transform: $transform;
+	-webkit-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
 }

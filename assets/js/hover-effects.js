@@ -2624,6 +2624,12 @@
     }, typeof b === K && (a.jQuery = a.$ = m), m
 });
 
+$(document).ready(function () {
+	$("#greyscale-effects").load("./views/greyscale.html");
+	$("#fade-effects").load("./views/fade.html");
+	$("#zoom").load("./views/zoom.html");
+	$("#shapes-effects").load("./views/shapes.html");
+});
 $(document).ready(function() {
 	$(document).on('click', 'nav a', function (e) {
 		e.preventDefault();

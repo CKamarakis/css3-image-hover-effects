@@ -76,17 +76,21 @@ nav {
     color: #AAAAAA;
     padding: 5px 0;
     margin: 0 10px;
-    -webkit-transition: 400ms;
-    -moz-transition: 400ms;
-    -o-transition: 400ms;
-    transition: 400ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
     display: block;
     float: left; }
     nav a::first-letter {
       border-top: 1px solid #AAAAAA;
       border-bottom: 1px solid #AAAAAA;
       margin-right: 1px;
-      padding: 10px 0 10px 2px; }
+      padding: 10px 0 10px 0px;
+      -webkit-transition: 500ms;
+      -moz-transition: 500ms;
+      -o-transition: 500ms;
+      transition: 500ms; }
   nav a:focus,
   nav a:hover,
   nav a.active {
@@ -95,7 +99,8 @@ nav {
     nav a:hover::first-letter,
     nav a.active::first-letter {
       border-top: 1px solid #EEEEEE;
-      border-bottom: 1px solid #EEEEEE; }
+      border-bottom: 1px solid #EEEEEE;
+      padding: 10px 0 10px 4px; }
 
 ul#selection-tabs {
   margin: 0;
@@ -210,5 +215,174 @@ ul#selection-tabs {
     .simple-fade article img.over:hover {
       opacity: 0;
       filter: alpha(opacity=0); }
+
+.simple-fade-away article {
+  position: relative;
+  overflow: visible;
+  height: 300px; }
+  .simple-fade-away article img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto; }
+  .simple-fade-away article img.over {
+    transition-property: all;
+    transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+    -moz-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0; }
+
+.simple-fade-away img.over:hover {
+  transition-property: all;
+  transition-duration: 1200ms;
+  -webkit-transition-duration: 1200ms;
+  -moz-transition-duration: 1200ms;
+  -o-transition-duration: 1200ms;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+  transform-origin: 50% 50%;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.fade-away article {
+  position: relative;
+  overflow: visible;
+  height: 300px; }
+  .fade-away article img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .fade-away article img.over {
+    transition-property: all;
+    transition-duration: 1000ms;
+    -webkit-transition-duration: 1000ms;
+    -moz-transition-duration: 1000ms;
+    -o-transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+    z-index: 2; }
+  .fade-away article img.under {
+    width: 40%;
+    height: 40%;
+    left: 30%;
+    top: 30%;
+    z-index: 1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition-property: all;
+    transition-duration: 800ms;
+    -webkit-transition-duration: 800ms;
+    -moz-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-timing-function: ease-out;
+    -webkit-transition-delay: 0ms;
+    -moz-transition-delay: 0ms;
+    -o-transition-delay: 0ms;
+    transition-delay: 0ms; }
+
+.fade-away article:hover img.under {
+  transition-property: all;
+  transition-duration: 800ms;
+  -webkit-transition-duration: 800ms;
+  -moz-transition-duration: 800ms;
+  -o-transition-duration: 800ms;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 200ms;
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  transition-delay: 200ms;
+  transform-origin: 50% 50%;
+  transform: scale(2.66);
+  -webkit-transform: scale(2.66);
+  -ms-transform: scale(2.66);
+  -o-transform: scale(2.66);
+  opacity: 100;
+  filter: alpha(opacity=10000); }
+
+.fade-away article:hover img.over {
+  transition-property: all;
+  transition-duration: 1000ms;
+  -webkit-transition-duration: 1000ms;
+  -moz-transition-duration: 1000ms;
+  -o-transition-duration: 1000ms;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+  transform-origin: 50% 50%;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  opacity: 0;
+  filter: alpha(opacity=0); }
+
+.fade-auto article {
+  position: relative;
+  overflow: visible;
+  height: 300px; }
+  .fade-auto article img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-name: AutoFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 9s; }
+
+/*For "n" images You must define:
+a=presentation time for one image
+b=duration for cross fading
+Total animation-duration is of course t=(a+b)*n
+ This example t= (3s + 1s)*3images = 12
+
+animation-delay = t/n or = a+b
+
+Percentage for keyframes:
+
+    0%
+    a/t*100%                  = 25%
+    (a+b)/t*100% = 1/n*100%   = 33.33%
+    100%-(b/t*100%)           = 91.67%
+    100%
+*/
+@keyframes AutoFadeInOut {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 1; }
+  33% {
+    opacity: 0; }
+  92% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fade-auto article img:nth-of-type(1) {
+  animation-delay: 6s; }
+
+.fade-auto article img:nth-of-type(2) {
+  animation-delay: 3s; }
+
+.fade-auto article img:nth-of-type(3) {
+  animation-delay: 0s; }
 
 /*# sourceMappingURL=hover-effects.css.map */
