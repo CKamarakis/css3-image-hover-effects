@@ -1,0 +1,55 @@
+.flashing-circle article {
+	position: relative;
+	overflow: hidden;
+	&:before{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		background: rgba(255, 255, 255, .2);
+		@include transform(translate(-50%, -50%));
+		@include create-opacity(0);
+		@include create-round-corners(50%);
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.flashing-circle article:hover:before {
+	-webkit-animation: flash-circle 1s;
+	animation: flash-circle 1s;
+}
+
+@-webkit-keyframes flash-circle {
+	0% {
+		@include create-opacity(100);
+	}
+	40% {
+		@include create-opacity(100);
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		@include create-opacity(0);
+	}
+}
+
+@keyframes flash-circle {
+	0% {
+		@include create-opacity(100);
+	}
+	40% {
+		@include create-opacity(100);
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		@include create-opacity(0);
+	}
+}

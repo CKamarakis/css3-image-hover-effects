@@ -1,0 +1,57 @@
+.flashing article {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		position: absolute;
+		top: 50%;
+		bottom: 50%;
+		left: 50%;
+		right: 50%;
+		z-index: 2;
+		content: '';
+		background: rgba(255, 255, 255, .2);
+//		@include transform(translate(-50%, -50%));
+		@include create-opacity(0);
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.flashing article:hover:before {
+	-webkit-animation: flash-square 0.75s;
+	animation: flash-square 0.75s;
+}
+
+@-webkit-keyframes flash-square {
+	0% {
+		@include create-opacity(100);
+	}
+	40% {
+		@include create-opacity(100);
+	}
+	100% {
+		top: -10%;
+		bottom: -10%;
+		left: -10%;
+		right: -10%;
+		@include create-opacity(0);
+	}
+}
+
+@keyframes flash-square {
+	0% {
+		@include create-opacity(100);
+	}
+	40% {
+		@include create-opacity(100);
+	}
+	100% {
+		top: -10%;
+		bottom: -10%;
+		left: -10%;
+		right: -10%;
+		@include create-opacity(0);
+	}
+}
