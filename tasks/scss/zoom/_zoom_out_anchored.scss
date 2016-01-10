@@ -1,0 +1,16 @@
+.zoom-out-anchored {
+	.zoom-wrapper {
+		img {
+			width: 400px;
+			height: 400px;
+			@include simple-transition(500ms);
+			@include transform-origin(0 0);
+		}
+	}
+	.zoom-wrapper:hover {
+		img {
+			@include scale(0.75);
+			@include transform-origin(0 0);
+		}
+	}
+}

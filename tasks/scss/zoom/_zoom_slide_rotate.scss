@@ -1,0 +1,20 @@
+.zoom-slide-rotate {
+	.zoom-wrapper {
+		img {
+			width: 540px;
+			height: 360px;
+			@include transition-duration(500ms);
+			@include transform(rotate(10deg));
+			position: absolute;
+			left: -50px;
+			top: -10px;
+
+		}
+	}
+	.zoom-wrapper:hover {
+		img {
+			left: -150px;
+			@include transform(rotate(0));
+		}
+	}
+}

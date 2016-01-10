@@ -1,0 +1,14 @@
+.zoom-in {
+	.zoom-wrapper {
+		img {
+			width:300px;
+			height:300px;
+			@include simple-transition(500ms);
+		}
+	}
+	.zoom-wrapper:hover{
+		img {
+			@include scale(1.4);
+		}
+	}
+}

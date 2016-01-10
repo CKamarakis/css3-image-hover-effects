@@ -3,6 +3,12 @@
 	transition-duration: $duration;
 }
 
+@mixin transform-origin($origin) {
+	-ms-transform-origin: $origin; /* IE 9 */
+	-webkit-transform-origin: $origin; /* Chrome, Safari, Opera */
+	transform-origin: $origin;
+}
+
 @mixin transition-delay($duration) {
 	-webkit-transition-delay: $duration;
 	-moz-transition-delay: $duration;
@@ -60,20 +66,14 @@
 @mixin simple-animation($duration, $delay, $ease, $element: all) {
 	transition-property: $element;
 
-	transition-duration: $duration;
-	-webkit-transition-duration: $duration;
-	-moz-transition-duration: $duration;
-	-o-transition-duration: $duration;
-
 	transition-timing-function: $ease;
+	@include transition-duration($duration);
 	@include transition-delay($delay);
 }
 
 @mixin complete_animation($duration, $delay, $ease, $transform, $originX: 50%, $originY: 50%, $element: all) {
 	@include simple-animation($duration, $delay, $ease, $element);
-	transform-origin: $originX $originY;
-	transform: $transform;
-	-webkit-transform: $transform;
-	-ms-transform: $transform;
-	-o-transform: $transform;
+
+	@include transform-origin($originX $originY);
+	@include transform($transform);
 }
