@@ -8,27 +8,56 @@ nav {
 	border-bottom: 1px solid $main_txt;
 	a {
 		color: $alternative_text;
-		padding: 5px 0;
-		margin:0 10px;
+		margin: 0 10px;
 		@include simple-transition(500ms);
 		display: block;
-		float:left;
-		&::first-letter{
-			border-top: 1px solid $alternative_text;
-			border-bottom: 1px solid $alternative_text;
-			margin-right: 1px;
-			padding: 10px 0 10px 0px;
+		float: left;
+		position: relative;
+		overflow: visible;
+		height: 42px;
+		line-height: 42px;
+		&:before {
+			content: " ";
+			height: 0;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			background: $main_txt;
 			@include simple-transition(500ms);
+			@include create-opacity(0);
+			border-top: 1px solid $main_txt;
+
+		}
+		&:after {
+			content: " ";
+			height: 0;
+			border-bottom: 1px solid $main_txt;
+			width: 100%;
+			position: absolute;
+			bottom: 50%;
+			left: 0;
+			right: 0;
+			background: $main_txt;
+			@include simple-transition(500ms);
+			@include create-opacity(0);
 		}
 	}
 	a:focus,
 	a:hover,
 	a.active {
 		color: $main_txt;
-		&::first-letter {
-			border-top: 1px solid $main_txt;
-			border-bottom: 1px solid $main_txt;
-			padding: 10px 0 10px 4px;
+	}
+	a:hover,
+	a.active {
+		&:before {
+			top: 0;
+			@include create-opacity(100);
+		}
+		&:after {
+			bottom: 0;
+			@include create-opacity(100);
 		}
 	}
 }
