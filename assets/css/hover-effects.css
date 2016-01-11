@@ -131,6 +131,8 @@ nav {
     bottom: 0;
     opacity: 100;
     filter: alpha(opacity=10000); }
+  nav a:first-of-type {
+    margin-left: 0; }
 
 ul#selection-tabs {
   margin: 0;

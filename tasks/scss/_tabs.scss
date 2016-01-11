@@ -60,6 +60,9 @@ nav {
 			@include create-opacity(100);
 		}
 	}
+	a:first-of-type {
+		margin-left: 0;
+	}
 }
 
 ul#selection-tabs {
