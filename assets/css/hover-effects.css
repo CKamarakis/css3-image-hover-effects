@@ -778,4 +778,33 @@ Percentage for keyframes:
   width: 297px;
   height: 297px; }
 
+.triangle-to-square .austin-1 {
+  width: 400px;
+  height: 295px;
+  position: relative;
+  display: inline-block;
+  background: url("../img/austin1.jpg"); }
+  .triangle-to-square .austin-1:before {
+    position: absolute;
+    display: block;
+    border-left: 100px solid #373737;
+    border-right: 100px solid #373737;
+    width: 200px;
+    float: left;
+    bottom: 0;
+    border-top: 173px solid transparent;
+    content: "";
+    z-index: 2; }
+  .triangle-to-square .austin-1:after {
+    position: absolute;
+    display: block;
+    border-left: 100px solid #373737;
+    border-right: 100px solid #373737;
+    width: 200px;
+    float: left;
+    top: 0;
+    border-bottom: 173px solid transparent;
+    content: "";
+    z-index: 2; }
+
 /*# sourceMappingURL=hover-effects.css.map */
