@@ -17,11 +17,20 @@ a:focus {
   text-decoration: none; }
 
 h1 {
-  font-size: 34px; }
+  font-size: 34px;
+  margin: 10px 0 40px; }
+
+h3.subtitle {
+  font-size: 16px;
+  margin: 16px 0;
+  font-weight: 400; }
 
 h2 {
   font-size: 28px;
   text-align: center; }
+
+p {
+  margin: 16px 0; }
 
 .container {
   width: 100%;
@@ -778,33 +787,176 @@ Percentage for keyframes:
   width: 297px;
   height: 297px; }
 
-.triangle-to-square .austin-1 {
-  width: 400px;
-  height: 295px;
-  position: relative;
-  display: inline-block;
-  background: url("../img/austin1.jpg"); }
-  .triangle-to-square .austin-1:before {
-    position: absolute;
-    display: block;
-    border-left: 100px solid #373737;
-    border-right: 100px solid #373737;
-    width: 200px;
-    float: left;
-    bottom: 0;
-    border-top: 173px solid transparent;
-    content: "";
-    z-index: 2; }
-  .triangle-to-square .austin-1:after {
-    position: absolute;
-    display: block;
-    border-left: 100px solid #373737;
-    border-right: 100px solid #373737;
-    width: 200px;
-    float: left;
-    top: 0;
-    border-bottom: 173px solid transparent;
-    content: "";
-    z-index: 2; }
+.triagle-borders, .triangle-to-square article .img-wrapper:before, .triangle-to-square article .img-wrapper:after {
+  position: absolute;
+  float: left;
+  display: block;
+  border-bottom: 280px solid transparent;
+  width: 140px;
+  content: "";
+  z-index: 2;
+  -webkit-transition: 750ms;
+  -moz-transition: 750ms;
+  -o-transition: 750ms;
+  transition: 750ms; }
+
+.triangle-to-square article {
+  width: 280px;
+  height: 280px;
+  overflow: hidden; }
+  .triangle-to-square article .img-wrapper {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #373737;
+    background-image: url("../img/austin1.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: 1000ms;
+    -moz-transition: 1000ms;
+    -o-transition: 1000ms;
+    transition: 1000ms; }
+    .triangle-to-square article .img-wrapper:before {
+      border-left: 140px solid #373737; }
+    .triangle-to-square article .img-wrapper:after {
+      border-left: 140px solid #373737;
+      transform: rotateZ(180deg);
+      transform: rotateY(180deg); }
+  .triangle-to-square article:nth-of-type(2) .img-wrapper {
+    background-image: url("../img/austin2.jpg"); }
+  .triangle-to-square article:nth-of-type(3) .img-wrapper {
+    background-image: url("../img/austin3.jpg"); }
+
+.triangle-to-square article:hover .img-wrapper {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+  .triangle-to-square article:hover .img-wrapper:before {
+    border-left: 0px solid #373737;
+    -ms-transform-origin: 100%;
+    /* IE 9 */
+    -webkit-transform-origin: 100%;
+    /* Chrome, Safari, Opera */
+    transform-origin: 100%; }
+  .triangle-to-square article:hover .img-wrapper:after {
+    border-left: 0px solid #373737;
+    -ms-transform-origin: 100%;
+    /* IE 9 */
+    -webkit-transform-origin: 100%;
+    /* Chrome, Safari, Opera */
+    transform-origin: 100%; }
+
+.hegagon-borders, .hexagon-to-circle article .img-wrapper:before, .hexagon-to-circle article .img-wrapper:after {
+  position: absolute;
+  float: left;
+  display: block;
+  border-left: 75px solid #373737;
+  border-right: 75px solid #373737;
+  width: 150px;
+  content: "";
+  z-index: 2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
+
+.hexagon-to-circle article {
+  height: 300px; }
+  .hexagon-to-circle article .img-wrapper {
+    width: 300px;
+    height: 220px;
+    position: relative;
+    display: inline-block;
+    background-image: url("../img/austin1.jpg");
+    background-position: 50%;
+    margin-top: 40px;
+    background-size: cover;
+    -webkit-transition: 750ms;
+    -moz-transition: 750ms;
+    -o-transition: 750ms;
+    transition: 750ms;
+    -ms-transform-origin: 50%;
+    /* IE 9 */
+    -webkit-transform-origin: 50%;
+    /* Chrome, Safari, Opera */
+    transform-origin: 50%; }
+    .hexagon-to-circle article .img-wrapper:before {
+      bottom: 0;
+      border-top: 150px solid transparent; }
+    .hexagon-to-circle article .img-wrapper:after {
+      top: 0;
+      border-bottom: 150px solid transparent; }
+  .hexagon-to-circle article:nth-of-type(2) .img-wrapper {
+    background-image: url("../img/austin2.jpg"); }
+  .hexagon-to-circle article:nth-of-type(3) .img-wrapper {
+    background-image: url("../img/austin3.jpg"); }
+
+.hexagon-to-circle article:hover .img-wrapper {
+  width: 300px;
+  height: 300px;
+  margin-top: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+  .hexagon-to-circle article:hover .img-wrapper:after, .hexagon-to-circle article:hover .img-wrapper:before {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+
+.stripe-borders, .stripe-to-square article .img-wrapper:before, .stripe-to-square article .img-wrapper:after {
+  position: absolute;
+  float: left;
+  display: block;
+  border-bottom: 280px solid transparent;
+  width: 140px;
+  content: "";
+  z-index: 2;
+  border-left: 140px solid #373737;
+  -webkit-transition: 750ms;
+  -moz-transition: 750ms;
+  -o-transition: 750ms;
+  transition: 750ms; }
+
+.stripe-to-square article {
+  width: 280px;
+  height: 280px;
+  overflow: hidden; }
+  .stripe-to-square article .img-wrapper {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #373737;
+    background-image: url("../img/austin1.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: 1000ms;
+    -moz-transition: 1000ms;
+    -o-transition: 1000ms;
+    transition: 1000ms; }
+    .stripe-to-square article .img-wrapper:after {
+      transform: rotateZ(180deg); }
+  .stripe-to-square article:nth-of-type(2) .img-wrapper {
+    background-image: url("../img/austin2.jpg"); }
+  .stripe-to-square article:nth-of-type(3) .img-wrapper {
+    background-image: url("../img/austin3.jpg"); }
+
+.stripe-to-square article:hover .img-wrapper:before {
+  border-left: 0px solid #373737;
+  -ms-transform-origin: 100%;
+  /* IE 9 */
+  -webkit-transform-origin: 100%;
+  /* Chrome, Safari, Opera */
+  transform-origin: 100%; }
+
+.stripe-to-square article:hover .img-wrapper:after {
+  border-left: 0px solid #373737;
+  -ms-transform-origin: 100%;
+  /* IE 9 */
+  -webkit-transform-origin: 100%;
+  /* Chrome, Safari, Opera */
+  transform-origin: 100%; }
 
 /*# sourceMappingURL=hover-effects.css.map */

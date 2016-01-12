@@ -1,0 +1,61 @@
+.hegagon-borders{
+	position: absolute;
+	float: left;
+	display: block;
+	border-left: 75px solid $main_bg;
+	border-right: 75px solid $main_bg;
+	width: 150px;
+	content: "";
+	z-index: 2;
+	@include simple-transition(500ms);
+}
+
+
+.hexagon-to-circle {
+	article {
+		height:300px;
+		.img-wrapper {
+			width: 300px;
+			height: 220px;
+			position: relative;
+			display: inline-block;
+			background-image: url('../img/austin1.jpg');
+			background-position: 50%;
+			margin-top: 40px;
+			background-size: cover;
+			@include simple-transition(750ms);
+			@include transform-origin(50%);
+			&:before {
+				bottom: 0;
+				border-top: 150px solid transparent;
+				@extend .hegagon-borders;
+			}
+			&:after {
+				top: 0;
+				border-bottom: 150px solid transparent;
+				@extend .hegagon-borders;
+			}
+		}
+		&:nth-of-type(2) .img-wrapper {
+			background-image: url('../img/austin2.jpg');
+		}
+		&:nth-of-type(3) .img-wrapper {
+			background-image: url('../img/austin3.jpg');
+		}
+	}
+}
+
+.hexagon-to-circle {
+	article:hover {
+		.img-wrapper {
+			width: 300px;
+			height: 300px;
+			margin-top: 0;
+			@include create-round-corners(50%);
+			&:after,
+			&:before {
+				@include create-opacity(0);
+			}
+		}
+	}
+}
