@@ -1,0 +1,35 @@
+.horizontal-flip {
+	article {
+		height: 300px;
+		-webkit-perspective: 1000;
+		perspective: 1000;
+		.flip-wrap {
+			@include simple-transition(600ms);
+			@include transform-style(preserve-3d);
+			position: relative;
+			.front,
+			.back {
+				backface-visibility: hidden;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 280px;
+				height: 280px;
+				img {
+					width: 280px;
+					height: 280px;
+				}
+			}
+			.front {
+				z-index: 2;
+				@include transform(rotateY(0deg));
+			}
+			.back {
+				@include transform(rotateY(-180deg));
+			}
+		}
+		&:hover .flip-wrap {
+			@include transform(rotateY(180deg));
+		}
+	}
+}

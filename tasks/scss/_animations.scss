@@ -16,6 +16,11 @@
 	transition-delay: $duration;
 }
 
+@mixin transform-style($style) {
+	-webkit-transform-style: $style;
+	transform-style: $style;
+}
+
 @mixin simple-transition($params) {
 	-webkit-transition: $params;
 	-moz-transition: $params;

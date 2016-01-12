@@ -1,0 +1,28 @@
+.spin-to-circle-and-fade {
+	article{
+		position: relative;
+		height:300px;
+		img {
+			width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			float: none;
+			display: block;
+			position: absolute;
+			left: 0;
+			@include transition-duration(600ms);
+
+		}
+		&:hover img{
+			@include create-round-corners(50%);
+			@include transform(rotate(360deg));
+
+		}
+		&:hover img.over{
+			@include create-opacity(0);
+
+		}
+	}
+
+}
