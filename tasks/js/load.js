@@ -4,4 +4,5 @@ $(document).ready(function () {
 	$("#zoom-effects").load("./views/zoom.html");
 	$("#opacity-effects").load("./views/opacity.html");
 	$("#shapes-effects").load("./views/shapes.html");
+	$("#extras-effects").load("./views/extras.html");
 });
