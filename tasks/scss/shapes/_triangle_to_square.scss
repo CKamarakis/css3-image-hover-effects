@@ -1,14 +1,3 @@
-.triagle-borders {
-	position: absolute;
-	float: left;
-	display: block;
-	border-bottom: 280px solid transparent;
-	width: 140px;
-	content: "";
-	z-index: 2;
-	@include simple-transition(750ms);
-}
-
 .triangle-to-square {
 	article {
 		width: 280px;
@@ -24,15 +13,23 @@
 			background-position: 50%;
 			background-size: cover;
 			background-repeat: no-repeat;
-			@include simple-transition(1000ms);
-
+			@include simple-transition(300ms);
+			&:after,
+			&:before {
+				position: absolute;
+				float: left;
+				display: block;
+				border-bottom: 280px solid transparent;
+				width: 140px;
+				content: "";
+				z-index: 2;
+				@include simple-transition(300ms);
+			}
 			&:before {
 				border-left: 140px solid $main_bg;
-				@extend .triagle-borders;
 			}
 			&:after {
 				border-left: 140px solid $main_bg;
-				@extend .triagle-borders;
 				transform: rotateZ(180deg);
 				transform: rotateY(180deg);
 			}
@@ -48,9 +45,7 @@
 
 .triangle-to-square {
 	article:hover {
-//		border: 1px solid $main_bg;
 		.img-wrapper {
-
 			@include create-round-corners(50%);
 			&:before {
 				border-left: 0px solid $main_bg;

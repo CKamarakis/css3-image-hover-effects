@@ -1,15 +1,3 @@
-.stripe-borders {
-	position: absolute;
-	float: left;
-	display: block;
-	border-bottom: 280px solid transparent;
-	width: 140px;
-	content: "";
-	z-index: 2;
-	border-left: 140px solid $main_bg;
-	@include simple-transition(750ms);
-}
-
 .stripe-to-square {
 	article {
 		width: 280px;
@@ -25,12 +13,20 @@
 			background-position: 50%;
 			background-size: cover;
 			background-repeat: no-repeat;
-			@include simple-transition(1000ms);
+			@include simple-transition(300ms);
+			&:after,
 			&:before {
-				@extend .stripe-borders;
+				position: absolute;
+				float: left;
+				display: block;
+				border-bottom: 280px solid transparent;
+				width: 140px;
+				content: "";
+				z-index: 2;
+				border-left: 140px solid $main_bg;
+				@include simple-transition(300ms);
 			}
 			&:after {
-				@extend .stripe-borders;
 				transform: rotateZ(180deg);
 			}
 		}
