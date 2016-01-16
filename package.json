@@ -1,0 +1,25 @@
+{
+	"name": "hover-effects",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "^3.9.0",
+		"gulp-concat": "^2.6.0",
+		"gulp-load-plugins": "^1.1.0",
+		"gulp-minify-css": "^1.2.1",
+		"gulp-plumber": "^1.0.1",
+		"gulp-sass": "^2.1.0",
+		"gulp-sourcemaps": "^1.6.0",
+		"gulp-uglify": "^1.5.1",
+		"q": "^1.2.0",
+		"del": "^1.1.1",
+		"gulp-if": "^1.2.5",
+		"gulp-util": "^3.0.4"
+	}
+}

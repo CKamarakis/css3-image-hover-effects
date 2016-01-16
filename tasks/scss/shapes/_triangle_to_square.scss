@@ -1,0 +1,60 @@
+.triangle-to-square {
+	article {
+		width: 280px;
+		height: 280px;
+		overflow: hidden;
+		.img-wrapper {
+			width: 280px;
+			height: 280px;
+			position: relative;
+			display: inline-block;
+			border: 1px solid $main_bg;
+			background-image: url('../img/austin1.jpg');
+			background-position: 50%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			@include simple-transition(300ms);
+			&:after,
+			&:before {
+				position: absolute;
+				float: left;
+				display: block;
+				border-bottom: 280px solid transparent;
+				width: 140px;
+				content: "";
+				z-index: 2;
+				@include simple-transition(300ms);
+			}
+			&:before {
+				border-left: 140px solid $main_bg;
+			}
+			&:after {
+				border-left: 140px solid $main_bg;
+				transform: rotateZ(180deg);
+				transform: rotateY(180deg);
+			}
+		}
+		&:nth-of-type(2) .img-wrapper {
+			background-image: url('../img/austin2.jpg');
+		}
+		&:nth-of-type(3) .img-wrapper {
+			background-image: url('../img/austin3.jpg');
+		}
+	}
+}
+
+.triangle-to-square {
+	article:hover {
+		.img-wrapper {
+			@include create-round-corners(50%);
+			&:before {
+				border-left: 0px solid $main_bg;
+				@include transform-origin(100%);
+			}
+			&:after {
+				border-left: 0px solid $main_bg;
+				@include transform-origin(100%);
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@import "zoom_in";
+@import "zoom_out";
+@import "zoom_out_anchored";
+@import "zoom_out_rotate";
+@import "zoom_slide";
+@import "zoom_slide_rotate";
+
+.zoom-wrapper {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}

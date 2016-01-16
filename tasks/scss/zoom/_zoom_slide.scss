@@ -1,0 +1,17 @@
+.zoom-slide {
+	.zoom-wrapper {
+		img {
+			width: 450px;
+			height: 300px;
+			@include simple-transition(500ms);
+			position: absolute;
+			left:0;
+
+		}
+	}
+	.zoom-wrapper:hover {
+		img {
+			left: -150px;
+		}
+	}
+}

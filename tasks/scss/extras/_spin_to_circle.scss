@@ -1,0 +1,20 @@
+.spin-to-circle {
+	article {
+		img {
+			width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+			float: none;
+			display: block;
+			position: relative;
+			overflow: visible;
+			@include transition-duration(600ms);
+
+			&:hover {
+				@include create-round-corners(50%);
+				@include transform(rotate(360deg));
+			}
+		}
+	}
+}

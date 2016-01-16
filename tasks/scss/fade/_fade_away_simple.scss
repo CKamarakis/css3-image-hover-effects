@@ -1,0 +1,21 @@
+.simple-fade-away {
+	article {
+		position: relative;
+		overflow: visible;
+		height: 300px;
+		img {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}
+		img.over {
+			@include simple-animation(1000ms, 0, ease-in-out);
+		}
+	}
+}
+
+.simple-fade-away img.over:hover {
+	@include complete_animation(1200ms, 0ms, ease-out, scale(1.25), 50%, 50%);
+	@include create-opacity(0);
+}

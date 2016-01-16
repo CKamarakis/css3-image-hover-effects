@@ -1,0 +1,31 @@
+.opacity-circle {
+	article {
+		position: relative;
+		overflow: hidden;
+		&:before {
+			position: absolute;
+			background: rgba(0, 0, 0, 0.6);
+			top: -80px;
+			bottom: -80px;
+			left: -80px;
+			right: -80px;;
+			z-index: 2;
+			content: '';
+			@include simple-transition(1200ms);
+			@include create-round-corners(50%);
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	article:hover {
+		&:before {
+			@include create-opacity(0);
+			top: 50%;
+			bottom: 50%;
+			left: 50%;
+			right: 50%;
+		}
+	}
+}
