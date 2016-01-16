@@ -5,14 +5,14 @@ In every project a few image hover effects are needed so I decided to gather som
 
 Over 25 effects are included and will be added form time to time.
 
-##Usage
+###Usage
 This package includes the original, SASS files (SCSS syntax), the Gulp set up and the result files.
 
 Each effect is contained in a separate SASS file to make things easier for you and each tab is contained in a separate html file.
 
 You can preview the result [here](http://hover-effects.ck-experiments.com).
 
-##Local Preview
+###Local Preview
 In order to view this package in a local environment please use firefox as Chrome does not allow loading local files or use a local sever (WAMP, MAMP etc...)
 
 
